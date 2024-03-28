@@ -94,7 +94,7 @@ StringTemplateBSM is a BSM for invokedynamic call for StringTemplate expression.
 - Bind the StringTemplateBSM instance to the MethodHandle receiver
 
 ## ClassFileGenerator
-ClassFileGenerator generate Main.class using ClassFileAPI.
+ClassFileGenerator generate Main.class using ClassFileAPI with invokedynamic for StringTemplate.
 Assuming Main.java is
 ```
 public class Main {
@@ -103,8 +103,6 @@ public class Main {
         System.out.println(StringTemplateSTRDebug.STR."Hello \{name}");
     }
 
-
-
     public static void main(String[] args) throws Throwable {
         doStringTemplate();
         doStringTemplate();
@@ -112,7 +110,7 @@ public class Main {
     }
 }
 ```
-(It's not fully corresponding byte codes to above codes)
+(It's not fully correspond byte codes to above codes)
 
 Actual generated (human readable by javap) byte codes are
 ```
