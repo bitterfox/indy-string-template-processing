@@ -15,6 +15,6 @@ public class StringTemplateSTRDebug implements StringTemplateProcessorFactory {
 
     @Override
     public boolean cacheProcessor() {
-        return false;
+        return true;
     }
 }
