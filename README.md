@@ -72,9 +72,9 @@ Now we can cache StringTemplateProcessor for StringTemplate expression by paring
 Overriding StringTemplateProcessorFactory#cacheProcessor let implementations to allow caching StringTemplateProcessor or not.
 
 ### StringTemplateSTRDebug
-StringTemplateSTRDebug is a implementation of StringTemplate.STR with debug print
-- when parsing fragments occureed (actually STR doesn't heavy work for fragments, but assume this is a StringTemplate for JSON or DB query builder)
-- when processing values for the fragments occurred
+StringTemplateSTRDebug is a implementation of StringTemplate.STR with debug print in case of StringTemplate processing is implemented with StringTemplateProcessorFactory and StringTemplateProcessor.
+- when parsing fragments occurred (StringTemplateProcessorFactory#createProcessor is called) (actually STR doesn't heavy work for fragments, but assume this is a StringTemplate for JSON or DB query builder)
+- when processing values for the fragments occurred (StringTemplateProcessor is called)
 
 ## StringTemplateRuntime
 StringTemplateRuntime calls StringTemplateProcessorFactory and StringTemplateProcessor for actual StringTemplate fragments and values.
